@@ -1,0 +1,33 @@
+page-register {
+
+}
+.theButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0A1921), color-stop(1, #081E2D));
+	background:-moz-linear-gradient(top, #0B1D28 5%, #0A141D 100%);
+	background:-webkit-linear-gradient(top, #0D1F29 5%, #051521 100%);
+	background:-o-linear-gradient(top, #04141D 5%, #0061a7 100%);
+	background:-ms-linear-gradient(top, #04141D 5%, #0061a7 100%);
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#0A1A23;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:2px;
+	border:1px solid #10222D;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 72px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #122946;
+}
+
+input{
+    font-family: FontAwesome,"Open Sans",Verdana,sans-serif;
+    text-decoration: inherit;
+}

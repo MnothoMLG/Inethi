@@ -1,0 +1,39 @@
+<!--
+  Generated template for the RecordPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar class="menu_toggle">
+        <ion-buttons>
+            <button ion-button menuToggle>
+              <ion-icon name="menu" ></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+<div class="top_section">
+<div><h1>Create Music</h1></div>
+<div class="row responsive-sm">
+       <div id="step_one" class="col" (click)="go_back()"><h6>Beat</h6></div>
+         <div id="step_two" class="col"><h6>Record</h6></div>
+       <div class="col"><h6>Info</h6></div>
+       <div class="col"><h6>Review</h6></div>
+</div>
+<h3> Record</h3>
+</div>
+
+
+<div class="button_record_class">
+    <button ion-button class="button_record" (click)="pushPage()">Add Info<ion-icon name="ios-arrow-forward"></ion-icon></button>
+</div>
+</ion-content>
+
+
+
+
+<script src="cordova.js"></script>

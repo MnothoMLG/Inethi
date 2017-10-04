@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar class="menu_toggle">
+        <ion-buttons>
+            <button ion-button menuToggle>
+              <ion-icon name="menu" ></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+<div class="content">
+    <div class="top_icon">
+    <ion-icon item-center class="top_icon" name="cloud-upload" ></ion-icon>
+    <br><br>
+    </div>
+    <div class="top_text">
+    <p class="top_text"> Upload New Track</p>
+    </div>
+
+    <div class="upload_section">  
+    
+        <p>{{this.choosen_file}}</p>
+        <h1 class="big_text">Select file to upload</h1>
+        <button class="button_rc" (click)="choose_file()" >Browse</button>
+        <h1 class="small_text" >OR</h1>
+        <button class="record_round" >REC</button>
+        <br>
+    </div>
+</div>
+</ion-content>

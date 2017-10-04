@@ -1,0 +1,30 @@
+page-search {
+    background-color: #4D4D4D !important;
+    .search_results {
+        .item{
+            background-color: #4D4D4D;
+        }
+       // background: map-get($colors, secondary);
+    }
+    .playerlist{
+        background-color: #4D4D4D;
+      }
+      
+      h2.artist{
+        // color : #001C42;
+        color : white;
+        font-weight: bold;
+        background-color: #4D4D4D;
+    }
+    p.title{
+        color : white;
+        background-color: #4D4D4D;
+
+    }
+
+    ion-toolbar{
+        //background: map-get($colors, secondary);
+                    height: 8px;
+                    font-size: 5px;
+                }
+}

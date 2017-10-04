@@ -1,0 +1,56 @@
+page-my-music {
+}
+    div.likes{
+        border-style: groove;
+
+        background: #BAB3C9;
+        width: 100%;
+    }
+    ion-content{
+        div{
+        width: 100%;
+    }
+    }
+
+p.title{
+    color : #68A1EC;
+    font-size: 10px;
+    
+}
+
+h1.head{
+    color : black;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+p.divlabels{
+
+    background-color: #08089F;
+}
+
+p.labels{
+    color: black;
+}
+ion-list {
+                //Color for the song in the list
+                .alternate1 {
+                    background-color: map-get($colors, primary);
+                }
+                .alternate {
+                    background-color: map-get($colors, secondary);
+                }
+    
+                .playing {
+    
+                    background-color: map-get($colors, dark);
+    
+                    img {
+                        opacity: 0.4;
+                    }
+                }
+
+}
+
+.playerlist{
+    background-color: #4D4D4D;
+  }

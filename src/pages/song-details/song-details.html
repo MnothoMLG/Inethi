@@ -1,0 +1,115 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @MnothoMLG
+ Sign out
+ Watch 1
+  Star 0  Fork 0 Bulele/Capstone_2017 Private
+ Code  Issues 0  Pull requests 1  Projects 0  Wiki Insights 
+Branch: master Find file Copy pathCapstone_2017/src/pages/song-details/song-details.html
+4368035  3 days ago
+ Frederick Chigwaza updated version
+0 contributors
+RawBlameHistory     
+94 lines (77 sloc)  2.45 KB
+<!--
+  Generated template for the SongDetailsPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-toolbar class="menu_toggle">
+    <ion-buttons>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-navbar>
+    <ion-title color="primary">SongDetailsPage</ion-title>
+
+  </ion-navbar>
+  <ion-list>
+    <button ion-item (click)="homePage()">
+      <ion-icon name ="home"></ion-icon>
+    </button>
+    <button ion-item (click)="searchPage()">
+      <ion-icon name="search"></ion-icon>
+    </button>
+    <button ion-item (click)="uploadPage()">
+      <ion-icon name="cloud-upload"></ion-icon>
+    </button>
+    
+  </ion-list>
+</ion-header>
+
+
+<ion-content >
+
+  <br>
+  <div class="songDetails">
+
+    <p>File chosen {{this.file_to_upload}}</p>
+    <p>Resolved path {{this.resolved_path}}</p>
+    <p>File path {{this.path}}</p>
+    <p>File name{{this.filename}}</p>
+    <p>File as string {{this.file_as_string}}</p>
+    <p>File as string  2 : {{this.file_as_string_2}}</p>
+    <div class="list">
+      <label class="item item-input ">
+        <div class="input-label">Add Album Art</div>
+        <ion-icon name="camera"></ion-icon>
+        <input id="file" type="file" accept="image/*" />
+      </label>
+      <label class="item item-input ">
+        <div class="input-label">Song Title</div>
+        <input type="text" [(ngModel)]="this.song_title" placeholder="Song Title">
+      </label>
+      <label class="item item-input item-select ">
+        <div class="input-label">Genre</div>
+        <select [(ngModel)]="this.genre">
+          <option>Hip hop/Rap</option>
+          <option>Reggae</option>
+          <option>Dancehall</option>
+          <option>RnB</option>
+          <option>House</option>
+        </select>
+
+      </label>
+      <label class="item item-input ">
+        <div class="input-label">Tags</div>
+        <input [(ngModel)]="this.tags" type="text" placeholder="Tags">
+      </label>
+      <label class="item item-input ">
+        <div class="input-label">Description</div>
+        <input  [(ngModel)]="this.song_description" type="text" placeholder="Description">
+      </label>
+      <label class="item item-input">
+        <div class="input-label">Private</div>
+        <input type="text" placeholder="Privacy">
+      </label>
+      <div class="card">
+        <div class="item item-text-wrap col">
+          <button ion-item (click)="whatsAppShare()">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </button>
+          <button ion-item (click)="fbShare()">
+            <ion-icon name="logo-facebook"></ion-icon>
+
+          </button>
+
+          <button (click)="process_upload()">Upload</button>
+        </div>
+      </div>
+    </div>
+      
+    </div>
+   
+
+</ion-content>

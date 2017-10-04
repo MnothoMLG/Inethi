@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar class="menu_toggle">
+    <ion-buttons>
+        <button ion-button menuToggle>
+          <ion-icon name="menu" ></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+<!--Still giving me problems--><!--progress-bar [progress]="currentTrack.progress"></progress-bar-->
+</ion-header>
+
+<ion-content >
+<div class="user_info">
+  <div class="user_header">
+      <div class="user_pic">
+        <ion-avatar>
+          <img [src]="'https://assets.audiomack.com/mlg-1/emotion-the-motion-2-275-275-1494704540.jpg'">
+        </ion-avatar>
+      </div>
+  </div>
+  <div class="user_username">
+      <h2>{{user_info.username}}</h2>
+  </div>
+  <p class="user_bio">
+    {{user_info.bio}} 
+  </p><br>
+
+  <button class="edit_profile">Edit profile</button>
+  <br><br>
+</div>
+
+<div> 
+  <p class="My_music">My Music</p>
+  <ion-list class="the_songs" > <!--A list of songs-->
+
+     <ion-item-sliding *ngFor="let track of tracks; let i = index;" (click)="like(track)" #item >
+
+       <ion-item-options side="left" class="side_options">
+         <!-- <button ion-button (click)="favorite(item)">Favorite</button> -->
+         <button ion-button color="danger" (click)="delete(item)"><ion-icon name="trash"></ion-icon></button>
+         <button ion-button color="danger" (click)="private(item)"> <ion-icon name="lock"></ion-icon></button>
+       </ion-item-options>
+
+           <ion-item detail-none ion-item class="playerlist"  (click)="playTrack(track)" [ngClass]="{ 'alternate2' : i%3, 'alternate' : i%2, 'playing' : track.playing }">
+           <ion-avatar item-left>
+             <img [src]="track.art">
+             <ion-spinner item-right *ngIf="track.playing" name="bubbles" item-left></ion-spinner>
+           </ion-avatar>
+           <h2 class="artist">{{track.artist}}</h2>
+           <p class="title">{{track.title}}</p>
+           <button class="opt" item-right clear ion-button icon-only>
+              <ion-icon
+                [name]="visible ? 'heart-outline' : 'heart'">
+              </ion-icon>
+            </button>
+
+           <button class="opt" item-right (click)="showOptions()" clear ion-button icon-only>      <ion-icon name="md-arrow-dropdown"></ion-icon> </button>
+          </ion-item>
+
+       </ion-item-sliding>
+  
+  </ion-list>
+</div>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col width="33">
+        <button (click)="prevTrack()" color="black_b" clear ion-button icon-only><ion-icon name="skip-backward"></ion-icon></button>
+      </ion-col>
+
+      <!--Column with for the play/pause button-->
+      <ion-col width="33">
+          <button *ngIf="!currentSong.playing" (click)="playTrack(currentSong)" color="black_b" clear ion-button icon-only><ion-icon name="play"></ion-icon></button>
+          <button *ngIf="currentSong.playing" (click)="pauseTrack(currentSong)" color="black_b" clear ion-button icon-only><ion-icon name="pause"></ion-icon></button>
+      </ion-col>
+
+      <ion-col width="33">
+          <button (click)="nextTrack()" color="black_b" clear ion-button icon-only><ion-icon name="skip-forward"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+
+<script src="cordova.js"></script>

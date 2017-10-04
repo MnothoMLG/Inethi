@@ -1,0 +1,93 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass File
+.toolbar-title{
+    text-align: center;
+    background: #4D4D4D;
+}
+
+.main_div{
+   // background: map-get($colors, secondary) !important;
+
+}
+.menu_items{
+    background: #4D4D4D;
+
+    // .item {
+    //     background-color:  map-get($colors, secondary);
+    // }
+    //border-bottom: 1px solid #8B8686;;
+}
+.item-profile, .item-avatar{
+
+    background:#4D4D4D;
+    border-bottom: none;
+    
+}
+
+.label{
+    background: #4D4D4D;
+    border-bottom: none;
+    border-top: none;
+}
+.menu_button{
+    background:#4D4D4D;
+    border-bottom: 1px solid #50F520;
+    color: #D8D8D8;
+    background-color: transparent;
+}
+.menu_icon{
+    color: #1161ee;
+    font-size:12px;
+}
+
+
+.item-avatar  {
+    width:100% !important;
+    height : 100% !important;
+    max-width: 120px !important;  //any size
+    max-height: 120px !important; //any size
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    h1.username{
+        color : #C1BCBC;
+        font-size:  14px;
+    }
+
+    .log_out {
+        text-align: center;
+        background-color:#0A1A23;
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+        border:none;
+        padding:15px 20px;
+        border-radius:25px;
+        background:#1161ee;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+    }
+
+    .the_button{
+        text-align: center;
+        background: #4D4D4D;
+        padding:10px 2px;
+    }
+
+    .username{
+        //font-family: 'Tangerine', serif;
+        font-size: 18px;   
+        color: #333333;
+        text-align : center;
+        background: #4D4D4D;
+    }
+
+   ion-tab{
+       .iontab{
+       background :  map-get($colors, secondary);}
+   }

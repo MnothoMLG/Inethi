@@ -1,0 +1,98 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content >
+
+    <div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label><input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+         <div class="mainForm">
+           <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">Username</label>
+                    <input id="user" [(ngModel)]="this.username" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Password</label>
+                    <input id="pass" [(ngModel)]="this.password" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked>
+                    <label for="check"><span class="icon"></span> Remember Me</label>
+                </div>
+            <div *ngIf="loggin_failed" class="userfeedback">Incorrect login details.</div>
+                <div class="group">
+                    <button (click)="log_in_user()"  clear ion-button >Sign In</button>
+                </div>
+                <!-- <div class="hr"></div> -->
+                <!-- <div class="foot-lnk">
+                    <a href="#forgot">Forgot Password?</a>
+                </div> -->
+            </div> 
+            <div class="sign-up-htm">
+                <div class="group">
+                    <label for="user" class="label">Username*</label>
+                    <input id="user" [(ngModel)]="this.username" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Password*</label>
+                    <input id="pass" [(ngModel)]="this.password" type="password" class="input" data-type="password">
+                </div>
+               <div class="group">
+                    <label for="pass" class="label">Confirm Password*</label>
+                    <input id="pass" [(ngModel)]="this.pass_confirm" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Email Address*</label>
+                    <input id="pass" [(ngModel)]="this.email" type="text" class="input">
+                </div>
+                  <div class="group">
+                    <!-- <input type="submit" onclick=this.register_user() class="button" value="Sign Up"> -->
+                    <div *ngIf="regstering_failed" class="userfeedback">Passwords don't match.</div>
+                    <button (click)="register_user()" class="button"  clear ion-button >Sign Up</button>
+                </div>
+                <!-- <div class="hr"></div> -->
+                <!--<div class="foot-lnk">
+                    <a><label for="tab-1">Already Member?</a>-->
+                <!-- </div>  -->
+            </div>
+        </div>
+    </div>
+</div>
+</ion-content>
+
+    <!--  
+  <ion-avatar item-center >
+      <table width="100%" height="100%" align="center" valign="center">
+          <tr><td>
+      
+      </td></tr>
+      </table>
+
+  </ion-avatar>
+    <br>
+        <div class="authForm" >
+
+            <img class="logo" src="assets/img/Logo.png"><br> <br> <br>
+            <label class=" item-input">
+                <ion-icon class="Form" name="person" ></ion-icon><p></p>
+                <input class="inputForm" type="text" placeholder="Username" ng-model="data.username">
+            </label>
+
+            <br><br>
+
+            <ion-icon class="Form" name="lock" ></ion-icon><p></p>
+            <label class="item-input">
+                <input class="inputForm" type="password" placeholder="Password" ng-model="data.password">
+            </label>
+
+            <br><br>
+            <button class="theButton"  (click)="log_in()">Login</button>
+        </div>
+
+        <div class="bottom">
+            <p>New User?<button (click)="Register_Page()">Sign Up</button></p>  <!-- If anchor clicked, navigate to the register page-->

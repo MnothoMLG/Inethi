@@ -1,0 +1,67 @@
+<ion-menu class="main_div" [content]="content">
+
+    <ion-content class="main_div"  >
+        <div class="main_div">
+        <ion-list>
+            
+            <ion-item class="item-profile">
+                <div class="item-avatar">
+                    <ion-avatar item-center >
+                        <img class="item-avatar" width="150" height="200" src="https://assets.audiomack.com/mlg-1/emotion-the-motion-2-275-275-1494704540.jpg">
+                    </ion-avatar>
+                    
+                </div>
+            </ion-item> 
+        <ion-item class="label">
+            <h1 class="username">username</h1>
+        </ion-item>
+            <ion-item class="menu_items">
+                <ion-list>
+                        <ion-item class="menu_items"> <!---*ngFor="let opt_page of tracks; let i = index;" -->
+                                <button class="menu_button" detail-none ion-item > <!--The option-->
+                                   
+                                    <button class="opt" item-left (click)="showAbout()" clear ion-button icon-only><ion-icon class="menu_icon" name="information-circle" ></ion-icon></button>
+                                    Profile <!--The current user's profile page-->
+                                </button>
+
+                        </ion-item>    
+
+                        <ion-item class="menu_items"t> <!---*ngFor="let opt_page of tracks; let i = index;" -->
+                            <button  class="menu_button" detail-none ion-item > <!--The option-->
+                               
+                                <button class="opt" item-left (click)="showSettings()" clear ion-button icon-only><ion-icon class="menu_icon" name="settings" ></ion-icon></button>
+                                Settings
+                            </button>
+
+                        </ion-item>
+                        
+                        <ion-item class="menu_items"> <!---*ngFor="let opt_page of tracks; let i = index;" -->
+                            <button class="menu_button" detail-none ion-item > <!--The option-->
+                               
+                                <button class="opt" item-left (click)="showHelp()" clear ion-button icon-only><ion-icon class="menu_icon" name="help-circle" ></ion-icon></button>
+                                Help
+                            </button>
+
+                        </ion-item> 
+
+
+                        <ion-item class="menu_items"> <!---*ngFor="let opt_page of tracks; let i = index;" -->
+                            <button class="menu_button" detail-none ion-item > <!--The option-->
+                               
+                                <button class="opt" item-left (click)="showOptions()" clear ion-button icon-only><ion-icon class="menu_icon" name="lock" ></ion-icon></button>
+                                Privacy
+                            </button>
+   
+                        </ion-item> 
+                        <div class="the_button">
+                            <button class="log_out">Logout</button>
+                        </div>
+                </ion-list>
+            </ion-item>
+            
+        </ion-list>
+    </div>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

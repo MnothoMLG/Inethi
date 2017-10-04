@@ -1,0 +1,58 @@
+<!--
+  Generated template for the MyMusicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar class="menu_toggle">
+        <ion-buttons>
+            <button ion-button menuToggle>
+              <ion-icon name="menu" ></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+
+<ion-list>
+    <ion-item>
+            <div class="likes">
+            <!--A for loop will create a button for each song... if clicked, the either plays/stops the song-->
+        <p *ngIf="fav_index" class="labels"> Likes </p>
+            <!--  PUT BACK FOR Clicks
+              (click)="track.playing ? : pauseTrack(track) : playTrack(track)" [ngClass]="{ 'alternate' : i % 2, 'playing' : track.playing }">
+              
+               let i = index;  [ngClass]="{ 'alternate2' : i%3, 'alternate' : i%2, 'playing' : track.playing }""
+            -->
+            <button class="opt" *ngIf="fav_index" item-right (click)="exploreAllFavs()" clear ion-button icon-only><ion-icon name="heart" ></ion-icon></button>
+            <button class="playerlist"  detail-none ion-item *ngFor="let track of this.liked_tracks.slice(0,fav_index); let i = index;"  (click)="playTrac(track)" > <!--The album art-->
+              <ion-avatar item-left>
+                <img [src]="'https://assets.audiomack.com/mlg-1/emotion-the-motion-2-275-275-1494704540.jpg'">
+                <ion-spinner *ngIf="track.playing" item-right name="bubbles" item-left></ion-spinner>
+              </ion-avatar>
+              <h2 class="artist">{{track.artist}}</h2>
+              <p class="title">{{track.title}}</p>
+              <button class="opt" item-right (click)="showOptions()" clear ion-button icon-only><ion-icon name="options" ></ion-icon></button>
+        
+            </button>
+            
+        </div>
+       
+    </ion-item>
+
+    <ion-item>
+            <div class="likes">
+            <!--A for loop will create a button for each song... if clicked, the either plays/stops the song-->
+        <p *ngIf="list_index" class="labels"> Playlists </p>
+            <button class="opt" *ngIf="list_index"  item-right (click)="showOptions()" clear ion-button icon-only><ion-icon name="play" ></ion-icon></button>
+            <button  ion-item *ngFor="let p_list of this.myplaylists.slice(0,list_index);" > <!--The album art-->
+              <h2 class="playlist">{{p_list.name}}</h2>
+              <p class="title">{{p_list.song_count}} Songs</p>
+            </button>
+        </div>
+    </ion-item>
+</ion-list>
+</ion-content>

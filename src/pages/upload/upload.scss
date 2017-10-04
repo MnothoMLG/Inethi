@@ -1,0 +1,103 @@
+page-upload {
+    background-color: map-get($colors, secondary);
+
+}
+div.upload_section{
+    background-color: map-get($colors, secondary);
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+.top_text{
+    //font-family: 'Tangerine', serif;
+    font-size: 12px;   
+    color: #C9BBBB;
+    font-family: 'Courier New', Courier, monospace;
+	padding:2px 2px;
+	text-align : center ;
+    background-color: map-get($colors, primary);
+}
+.big_text{
+    //font-family: 'Tangerine', serif;
+    font-size: 18px;   
+    color: #A8A6A6;
+    font-family: 'Courier New', Courier, monospace;
+	padding:15px 2px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #122946;
+}
+.record_round {
+    display:block;
+    width:50px;
+    height:50px;
+    line-height:25px;
+    border: 2px solid #8B8686;
+    border-radius: 50%;
+    color:#000000;
+    text-align:center;
+    text-decoration:none;
+    background: #FF1515;
+    box-shadow: 0 0 3px gray;
+    font-size:15px;
+    font-weight:bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.record_round:hover {
+    display:block;
+    width:50px;
+    height:50px;
+    line-height:25px;
+    border: 2px solid #8B8686;
+    border-radius: 50%;
+    color:#000000;
+    text-align:center;
+    text-decoration:none;
+    background: #D02828;
+    box-shadow: 0 0 3px gray;
+    font-size:15px;
+    font-weight:bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.top_icon{
+    font-size: 50px;
+    text-align: center;
+    color:#1161ee;
+    background-color: map-get($colors, primary);
+}
+.button_rc:hover{
+    background: #1161ee;
+}
+
+.button_rc {
+    display:block;
+    width:100px;
+    height:30px;
+    line-height:25px;
+    border: 1px solid #1161ee;
+    border-radius: 5%;
+    color:#828080;
+    text-align:center;
+    text-decoration:none;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0 0 3px gray;
+    font-size:15px;
+    font-weight:bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.content{
+   color: map-get($colors, primary);
+   
+}
+
+.small_text{
+    font-size: 10px;
+}

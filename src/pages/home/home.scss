@@ -1,0 +1,246 @@
+ .ios, .md {
+                      page-home {
+              
+
+                        
+                          $song-card-height: 90px;
+              
+
+                          div{
+
+                            background-color: #4D4D4D;
+                            .user_info{
+                                background: map-get($colors, secondary);
+                                text-align : center;
+                                align-content: center;
+                            }
+
+                            p.My_music{
+
+                                    color: #7D7D7D;
+                                    text-align : center;
+                                    
+                                    padding-bottom: 10px;
+                                    padding-top:5px;
+                                    border-bottom: 1px solid #1F1F1F;
+                                    border-top : none;
+                                    border-right : none;
+                                    border-left : none;
+                            
+                            }
+                            p.user_bio{
+                                color: #7A7A7A;
+                                font-size: 9px;
+                                word-wrap: break-word;
+        
+                                width: 80%;
+                                text-align: center;
+                                display: table-cell;
+                                vertical-align:middle;
+                                background: map-get($colors, secondary);
+                            }
+                            div.user_username{
+                                h2{
+                                font-size: 12px;
+                                text-align: center;
+                                color : #FFF5F5;
+                               
+                                background: map-get($colors, secondary);
+                                }
+                            }
+
+
+                            ion-list{
+                                .the_songs
+                                {
+                        
+                                }
+                            }
+                          }
+
+
+                          ion-list {
+              
+                              margin-bottom: $song-card-height + 20px;
+                              //Color for the song in the list
+                              .alternate2 {
+                                  // background-color: map-get($colors, primary);
+                                  background-color: #4D4D4D;
+                              }
+                              .alternate {
+                                  // background-color: map-get($colors, secondary);
+                                  background-color: #4D4D4D;
+                              }
+              
+                              .playing {
+              
+                                  background-color: map-get($colors, dark);
+              
+                                  img {
+                                      opacity: 0.4;
+                                  }
+                              }
+              
+                          }
+              
+                          ion-avatar {
+                              position: relative;
+                          }
+              
+                          ion-spinner {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              margin: 4px !important;
+                          }
+              
+                          [ion-item] {
+                              background-color: map-get($colors, primary);
+                              padding: 20px;
+                          }
+              
+                          ion-card {
+                              background-color: map-get($colors, light);
+                              opacity: 0.9;
+                              height: $song-card-height;
+                              bottom: 0;
+                          }
+              
+                          ion-footer {
+                              height: 75px;
+                              background-color: map-get($colors, dark);
+              
+                              ion-grid, ion-row, ion-col {
+                                  height: 100%;
+                              }
+              
+                              ion-col {
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                              }
+                          }
+              
+                      }
+              
+                      .alert-md .alert-head{
+                        background-color: #2E114F;
+                        color: white;
+                      }
+                      .alert-md .alert-message{
+                        color:black;
+                      }
+                      .alert-md .alert-button{
+                        background-color: #2E114F;
+                        color: white;
+                      }
+              
+                      h2.artist{
+                          // color : #001C42;
+                          color : white;
+                          font-weight: bold;
+                      }
+              
+                      button.opt{
+                        // color : #001C42;
+                         color : white;
+                          font-weight: bold;
+                      }
+                      button.like{
+                        color: white;
+                      }
+                      button.like:hover{
+                        color: purple;
+                      }
+                      p.title{
+                          color : white;
+              
+                      }
+                      ion-item.playerlist{
+                        background-color: #4D4D4D;
+                      }
+                      h1.head{
+                          color : black;
+                          font-weight: bold;
+                          font-family: Georgia, serif;
+                      }
+                      ion-item-options.side_options .button-md-danger{
+                        background-color: #2E114F;
+                      }
+                      ion-toolbar.menu_toggle{
+              
+                          height: 8px;
+                          font-size: 5px;
+                      }
+                      .user_info{
+                        display: block;
+                        color: white;
+                      }
+              
+                      .user_header{
+                        // text-align: center;
+                        // position: relative;
+                        padding-top : 10px;
+                        display: flex;
+                        justify-content: center;
+                        background: map-get($colors, secondary);
+                      }
+                      .user_pic{
+                        width:100px;
+                        height: 100px;
+              
+                      }
+              
+                      .user_pic ion-avatar img{
+                        border-radius: 100%;
+                        // border-radius:50%;
+                        -moz-border-radius:100%;
+                        -webkit-border-radius: 100%;
+                       
+                        // display: block;
+                        // margin: auto;
+                        // position:block;
+                      }
+
+                      h2.artist{
+                        color : #BAB5B5;
+                        
+                        font-size: 14px;
+                    }
+            
+                    button.opt{
+                        color : #F8FAFF;
+                        //font-weight: bold;
+                        font-size: 8px;
+                    }
+            
+                    p.title{
+                        color : #68A1EC;
+                        font-size: 10px;
+                        
+                    }
+                    h1.head{
+                        color : black;
+                        font-weight: bold;
+                        font-family: Georgia, serif;
+                    }
+                    ion-toolbar.menu_toggle{
+            
+                        height: 8px;
+                        font-size: 5px; 
+                    }
+
+                    button.edit_profile{
+                        background:#1161ee;
+                        border:none;
+                        font-size : 10px;
+                        padding: 10px 15px;
+                        border-radius:25px;
+                        //background:rgba(255,255,255,.1);
+                    }
+                    
+                    
+    
+        }
+  
+
